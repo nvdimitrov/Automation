@@ -24,8 +24,3 @@ npx playwright install chromium
 npx playwright test
 ```
 
-## Run tests with the browser visible
-
-```bash
-npx playwright test --headed
-```
