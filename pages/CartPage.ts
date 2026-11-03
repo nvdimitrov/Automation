@@ -8,7 +8,7 @@ export class CartPage {
   }
 
    productName () {
-    return this.page.locator('[data-test="inventory-item-name"]');
+    return this.page.locator('#item_4_title_link');
 }
 
   
