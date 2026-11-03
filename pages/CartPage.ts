@@ -11,5 +11,7 @@ export class CartPage {
     return this.page.locator('#item_4_title_link');
 }
 
-  
+  async removeProduct () {
+    await this.page.locator('#remove-sauce-labs-backpack').click();
+  }
 }
