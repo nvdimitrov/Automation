@@ -33,4 +33,9 @@ export class CheckoutPage {
   confirmationMessage() {
     return this.page.locator('.complete-header');
   }
+
+  // Return the checkout error message locator
+  errorMessage() {
+    return this.page.locator('[data-test="error"]');
+  }
 }
