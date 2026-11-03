@@ -6,7 +6,7 @@ export class LoginPage {
     this.page = page;
   }
 
-  async open () {
+  async openSauceDemoSite () {
     await this.page.goto('https://www.saucedemo.com/');
   }
 
@@ -16,7 +16,8 @@ export class LoginPage {
     await this.page.locator('#login-button').click();
   }
 
-  errorMessage() {
+  errorMessageIncorrectCrendetials() {
   return this.page.locator('[data-test="error"]');
 }
+
 }
