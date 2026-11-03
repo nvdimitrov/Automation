@@ -29,3 +29,22 @@ test('User can complete a purchase', async ({ page }) => {
   // Check that the order was completed
   await expect(checkoutPage.confirmationMessage()).toContainText('Thank you for your order!');
 });
+
+test('Checkout shows an error when required information is missing', async ({ page }) => {
+  const loginPage = new LoginPage(page);
+  const productsPage = new ProductsPage(page);
+  const checkoutPage = new CheckoutPage(page);
+
+  // Log in and add a product to the cart
+  await loginPage.openSauceDemoSite();
+  await loginPage.login('standard_user', 'secret_sauce');
+  await productsPage.addToCart();
+  await productsPage.openCart();
+
+  // Open checkout and continue without filling in the required details
+  await checkoutPage.checkout();
+  await checkoutPage.continueToOverview();
+
+  // Check that checkout asks for the first name
+  await expect(checkoutPage.errorMessage()).toContainText('Error: First Name is required');
+});
