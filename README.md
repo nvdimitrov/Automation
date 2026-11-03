@@ -8,19 +8,12 @@ The tests cover login, adding/removing a product from the cart and completing an
 
 ## Install project dependencies
 
-```bash
 npm ci
-```
 
 ## Install the Chromium browser
 
-```bash
 npx playwright install chromium
-```
 
 ## Run all tests
 
-```bash
 npx playwright test
-```
-
