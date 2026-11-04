@@ -16,7 +16,9 @@ npx playwright install chromium firefox
 
 ## Run tests only in Firefox
 
-npx playwright test --project=firefox 
+```bash
+npx playwright test --project=firefox
+```
 
 ## Run tests only in Chromium
 
