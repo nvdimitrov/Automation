@@ -8,12 +8,14 @@ The tests cover login, adding/removing a product from the cart and completing an
 
 ## Install project dependencies
 
+```bash
 npm ci
+```
 
 ## Install the browsers
-
+```bash
 npx playwright install chromium firefox
-
+```
 ## Run tests only in Firefox
 
 ```bash
