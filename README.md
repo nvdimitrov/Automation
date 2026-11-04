@@ -13,8 +13,10 @@ npm ci
 ```
 
 ## Install the browsers
+
 ```bash
 npx playwright install chromium firefox
+
 ```
 ## Run tests only in Firefox
 
@@ -24,8 +26,12 @@ npx playwright test --project=firefox
 
 ## Run tests only in Chromium
 
+```bash
 npx playwright test --project=chromium 
+```
 
 ## Run all tests (both browsers)
 
+```bash
 npx playwright test
+```
