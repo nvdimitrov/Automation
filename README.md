@@ -10,10 +10,18 @@ The tests cover login, adding/removing a product from the cart and completing an
 
 npm ci
 
-## Install the Chromium browser
+## Install the browsers
 
-npx playwright install chromium
+npx playwright install chromium firefox
 
-## Run all tests
+## Run tests only in Firefox
+
+npx playwright test --project=firefox 
+
+## Run tests only in Chromium
+
+npx playwright test --project=chromium 
+
+## Run all tests (both browsers)
 
 npx playwright test
